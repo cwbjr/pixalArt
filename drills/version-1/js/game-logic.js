@@ -19,6 +19,7 @@ function switchPlayer() {
 function endGame(endFormation) {
   var endMessage = 'Game Over. Player ' + currentPlayer + ' Wins'
   changeMessage()
+  displayButton()
   displayMessage(endMessage)
 }
 

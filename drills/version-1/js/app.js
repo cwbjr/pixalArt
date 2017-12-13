@@ -45,5 +45,8 @@ function makeMove(square, index) {
   square.innerHTML = currentPlayer;
 }
 
+function displayButton() {
+  document.querySelector('.play-again').style.display = "block";
+}
 
 createGame();
