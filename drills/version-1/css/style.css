@@ -61,10 +61,10 @@ header h1 {
   line-height: 130px;
 }
 .r-border {
-  border-right: 1px solid #333;
+  border-right: 2px solid #333;
 }
 .b-border {
-  border-bottom: 1px solid #333;
+  border-bottom: 2px solid #333;
 }
 .winning-square {
   color: #6bb565;
