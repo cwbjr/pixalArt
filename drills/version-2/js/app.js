@@ -2,9 +2,8 @@ const buttonsArray = document.getElementsByTagName("span");
 
 const screen = document.getElementById("screen");
 const clear = document.getElementById("clear");
-// const zero = document.getElementById("zero");
-
-console.log(clear);
+const zero = document.getElementById("zero");
+const equals = document.getElementById("equals");
 
 for (var i = 0; i < buttonsArray.length; i++) {
     if(buttonsArray[i].innerHTML === "=") {
@@ -29,15 +28,18 @@ function fillScreen(i) {
 function calculate(i) {
     return function () {
             var showScreen = screen.innerHTML;
-
             var btnNumbers = showScreen.replace(/[\d.]+/g, function(n){
                 return parseFloat(n);
             });
-
       screen.innerHTML = eval(btnNumbers);
     };
-
 }
+
+equals.onclick = function() {
+    if(screen.innerHTML === "Infinity") {
+        screen.innerHTML = "Error";
+    }
+};
 
 clear.onclick = function() {
     screen.innerHTML = "";
