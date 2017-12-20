@@ -1,3 +1,5 @@
+let brush;
+
 const wrapper = document.createElement("div");
 wrapper.setAttribute("class", "wrapper");
 document.body.appendChild(wrapper);
@@ -25,7 +27,6 @@ const buttonLarge = document.createElement("button");
 buttonLarge.setAttribute("class", "canvas-button-large button");
 buttonLarge.innerHTML = "Large";
 links.appendChild(buttonLarge);
-
 
 const canvas = document.createElement("div");
 canvas.setAttribute("class", "canvas-board");
@@ -58,8 +59,6 @@ pallet.appendChild(brushFive);
 function setBrushColor(pixel, color){
   pixel.style.backgroundColor = color;
 }
-
-
 
 let canvasButton = document.querySelectorAll("button");
 
