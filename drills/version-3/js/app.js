@@ -1,4 +1,4 @@
-let brush;
+// let brush;
 
 const wrapper = document.createElement("div");
 wrapper.setAttribute("class", "wrapper");
@@ -56,9 +56,17 @@ const brushFive = document.createElement("div");
 brushFive.setAttribute("class", "paint-brush color-five");
 pallet.appendChild(brushFive);
 
-function setBrushColor(pixel, color){
-  pixel.style.backgroundColor = color;
-}
+// function setBrushColor(pixel, color){
+//   pixel.style.backgroundColor = color;
+// }
+
+// const colorArr = document.querySelectorAll("paint-brush");
+// console.log(colorArr);
+// let arr = [];
+// arr.push(from("paint-brush").forEach(function(element) {
+//       element.addEventListener('click', myFunction);
+//     }));
+
 
 let canvasButton = document.querySelectorAll("button");
 
@@ -81,7 +89,6 @@ buttonSmall.addEventListener("click", function() {
       newSquare.classList.add('pixel');
       canvas.appendChild(newSquare);
     }
-
 });
 
 buttonMedium.addEventListener('click', function(num) {
