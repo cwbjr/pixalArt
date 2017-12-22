@@ -1,14 +1,16 @@
 let brushColor;
 
+// Main div
 const wrapper = document.createElement("div");
 wrapper.setAttribute("class", "wrapper");
 document.body.appendChild(wrapper);
 
 const title = document.createElement("h1");
-const titleText = document.createTextNode("Fun Pixel Art Maker");
+const titleText = document.createTextNode("Ballew's Pixel Art Maker");
 title.appendChild(titleText);
 wrapper.appendChild(title);
 
+// Buttons
 const links = document.createElement("div");
 links.setAttribute("class", "canvas-links");
 wrapper.appendChild(links);
@@ -28,6 +30,7 @@ buttonLarge.setAttribute("class", "canvas-button-large buttons");
 buttonLarge.innerHTML = "Large";
 links.appendChild(buttonLarge);
 
+// Pixel Board
 const canvas = document.createElement("div");
 canvas.setAttribute("class", "canvas-board");
 wrapper.appendChild(canvas);
@@ -36,6 +39,7 @@ const pallet = document.createElement("div");
 pallet.setAttribute("class", "paint-pallet");
 wrapper.appendChild(pallet);
 
+// Paint Brushes
 const brushOne = document.createElement("div");
 brushOne.setAttribute("class", "paint-brush color-one");
 brushOne.style.backgroundColor = "#FFF";
@@ -81,11 +85,12 @@ brushFour.addEventListener("click", function(event) {
   brushFour.setAttribute("class", "highLight");
 });
 
-brushFive.addEventListener("onhover", function(event) {
+brushFive.addEventListener("click", function(event) {
   brushColor = event.target.style.backgroundColor;
   brushFive.setAttribute("class", "highLight");
 });
 
+// Pixel Canvas
 buttonSmall.addEventListener("click", function(event) {
   let artistChoice = 256;
   canvas.setAttribute("class", "canvas-board small-canvas");
@@ -132,7 +137,7 @@ buttonLarge.addEventListener("click", function() {
 
 function addColor(event) {
   event.target.style.backgroundColor = brushColor;
-  event.setAttribute("")
+  // event.setAttribute("");
 }
 
 let canvasButton = document.querySelectorAll("button");
@@ -147,16 +152,3 @@ for(let i = 0; i < canvasButton.length; i++) {
     this.style.color = "black";
   }, false);
 }
-
-// let disableButtons = document.getElementsByClassName("buttons");
-//
-// for(let i = 0; i < disableButtons.length; i++) {
-//   disableButtons[i].addEventListener("click", function() {
-//     switch (i) {
-//           case 0: case 1: case 2:
-//             this.disabled = true;
-//             break;
-//         }
-//   });
-//
-// }
