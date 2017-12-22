@@ -76,7 +76,17 @@ h1, .canvas-links {
     width: 40px;
     border: 2px solid black;
     border-radius: 100%;
-    background-color: red;
+    /* background-color: red; */
+}
+
+.highLight {
+   display:inline-block;
+   height: 40px;
+   width: 40px;
+   border: 2px solid yellow;
+   border-radius: 100%;
+   margin: 0 5px;
+   /* background-color: red; */
 }
 
 .paint-pallet {
@@ -87,7 +97,7 @@ h1, .canvas-links {
 }
 
 .color-one, .color-two, .color-three, .color-four, .color-five {
-    margin: 0 5px;
+   margin: 0 5px;
 }
 
 .color-one {
